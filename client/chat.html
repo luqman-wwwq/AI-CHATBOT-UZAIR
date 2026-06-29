@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - AI with Uzair</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/chat.css">
+</head>
+<body class="dark-theme">
+    <div class="chat-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>💬 Chats</h1>
+                <button class="btn-new-chat" onclick="createNewChat()">+ New Chat</button>
+            </div>
+
+            <div class="chats-list" id="chatsList">
+                <div class="empty-state">No chats yet</div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="sidebar-btn" onclick="navigateTo('profile.html')">
+                    👤 Profile
+                </button>
+                <button class="sidebar-btn" onclick="navigateTo('settings.html')">
+                    ⚙️ Settings
+                </button>
+                <button class="sidebar-btn" onclick="logout()">
+                    🚪 Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="chat-area">
+            <div class="chat-header">
+                <h2 id="chatTitle">New Chat</h2>
+                <div class="header-actions">
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <span id="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="messages-container" id="messagesContainer">
+                <div class="welcome-message">
+                    <h2>Welcome to AI with Uzair! 👋</h2>
+                    <p>Start a conversation and I'll help you with anything you need.</p>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="Type your message here..."
+                        rows="1"
+                    ></textarea>
+                    <button class="send-btn" onclick="sendMessage()">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
